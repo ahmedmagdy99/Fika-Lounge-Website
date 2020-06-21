@@ -130,7 +130,7 @@
       <!--Start Buttons Navigation Between Food-->
       <div class="row my-5">
         <!--Grill Start-->
-        <div class="col-md-3 text-center">
+        <div class="col-lg-3 col-md-12 col-sm-12 text-center">
           <div class="food grill">
             <div class="p-5">
               <i class="fas fa-bacon"></i>
@@ -139,7 +139,7 @@
           </div>
         </div>
         <!--Fast Food Start-->
-        <div class="col-md-3 text-center">
+        <div class="col-lg-3 col-md-12 col-sm-12 text-center">
           <div class="food fast">
             <div class="content p-5">
               <i class="fas fa-hamburger"></i>
@@ -148,7 +148,7 @@
           </div>
         </div>
         <!--Cookies Start-->
-        <div class="col-md-3 text-center">
+        <div class="col-lg-3 col-md-12 col-sm-12 text-center">
           <div class="food cookies">
             <div class="content p-5">
               <i class="fas fa-cookie"></i>
@@ -157,7 +157,7 @@
           </div>
         </div>
         <!--Coffee Start-->
-        <div class="col-md-3 text-center">
+        <div class="col-lg-3 col-md-12 col-sm-12 text-center">
           <div class="food coffee">
             <div class="content p-5">
               <i class="fas fa-coffee"></i>
@@ -409,8 +409,10 @@
   </div>
   <!--End Of Footer-->
 
-  <div class="loader-wrapper">
-    <span class="loader"><span class="loader-inner"></span></span>
+  <div class="loader">
+    <div class="spinner-grow" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
   </div>
 
   <script src="js/jquery-3.4.1.js"></script>
@@ -423,8 +425,9 @@
     new WOW().init();
   </script>
   <script>
-    $(window).on("load", function () {
-      $(".loader-wrapper").fadeOut("slow");
+    window.addEventListener("load", function () {
+      const loader = document.querySelector(".loader");
+      loader.className += " hidden"; // class "loader hidden"
     });
   </script>
 </body>
